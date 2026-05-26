@@ -3,7 +3,7 @@ package com.pluralsight;
 public class Chips {
     private String type;
 
-    public Chips() {
+    public Chips(String type) {
         this.type = type;
     }
 
@@ -14,4 +14,5 @@ public class Chips {
     public String toString() {
         return type + " chips - $" + getPrice();
     }
+
 }

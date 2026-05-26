@@ -74,25 +74,25 @@ public class App {
 
         Sandwich sandwich = new Sandwich(size, bread);
 
-        System.out.print("Add meat? Enter type or leave blank: ");
+        System.out.print("Add meat? Enter type or leave blank: (Steak, Ham, Salami, Chicken, Bacon) ");
         String meat = input.nextLine();
         if (!meat.equals("")) {
             sandwich.addMeat(meat);
         }
 
-        System.out.print("Add cheese? Enter type or leave blank: ");
+        System.out.print("Add cheese? Enter type or leave blank: (Cheddar, Provolone, Swiss, American) ");
         String cheese = input.nextLine();
         if (!cheese.equals("")) {
             sandwich.addCheese(cheese);
         }
 
-        System.out.print("Add regular topping? Enter type or leave blank: ");
+        System.out.print("Add regular topping? Enter type or leave blank: (Tomatoes, Lettuce, Peppers,Onions, Jalapenos, Cucumbers, Pickles, Guacamole, Mushrooms) ");
         String topping = input.nextLine();
         if (!topping.equals("")) {
             sandwich.addTopping(topping);
         }
 
-        System.out.print("Add sauce? Enter type or leave blank: ");
+        System.out.print("Add sauce? Enter type or leave blank: (Mayo, Mustard, Ketchup, Ranch, Thousand Islands, Vinaigrette) ");
         String sauce = input.nextLine();
         if (!sauce.equals("")) {
             sandwich.addSauce(sauce);
@@ -113,7 +113,7 @@ public class App {
         System.out.print("Choose drink size (small, medium, large): ");
         String size = input.nextLine();
 
-        System.out.print("Choose drink flavor: ");
+        System.out.print("Choose drink flavor:(Sprite, Coke, Pepsi, Lemonade, Ginger Ale) ");
         String flavor = input.nextLine();
 
         System.out.println("Drink added.");
@@ -121,11 +121,11 @@ public class App {
     }
 
     public static Chips createChips() {
-        System.out.print("Choose chip type: ");
+        System.out.print("Choose chip type: (Doritos, Cheetos, Ruffles, Lay's, Herr's) ");
         String type = input.nextLine();
 
         System.out.println("Chips added.");
-        return new Chips();
+        return new Chips(type);
     }
 
     public static void checkout(Order order) {
