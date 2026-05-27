@@ -1,5 +1,11 @@
 package com.pluralsight;
 
+import com.pluralsight.data.ReceiptWriter;
+import com.pluralsight.model.Chips;
+import com.pluralsight.model.Drink;
+import com.pluralsight.model.Order;
+import com.pluralsight.model.Sandwich;
+
 import java.util.Scanner;
 
 public class App {
