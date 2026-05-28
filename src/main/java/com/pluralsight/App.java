@@ -5,6 +5,7 @@ import com.pluralsight.model.Chips;
 import com.pluralsight.model.Drink;
 import com.pluralsight.model.Order;
 import com.pluralsight.model.Sandwich;
+import com.pluralsight.ui.UserInterface;
 
 import java.util.Scanner;
 
@@ -15,11 +16,7 @@ public class App {
         boolean running = true;
 
         while (running) {
-            System.out.println();
-            System.out.println("=== DELI-cious ===");
-            System.out.println("1 - New Order");
-            System.out.println("0 - Exit");
-            System.out.print("Choose an option: ");
+            UserInterface.showHomeScreen();
 
             String choice = input.nextLine();
 
@@ -39,14 +36,7 @@ public class App {
         boolean ordering = true;
 
         while (ordering) {
-            System.out.println();
-            System.out.println("=== Order Screen ===");
-            System.out.println("1 - Add Sandwich");
-            System.out.println("2 - Add Drink");
-            System.out.println("3 - Add Chips");
-            System.out.println("4 - Checkout");
-            System.out.println("0 - Cancel Order");
-            System.out.print("Choose an option: ");
+            UserInterface.showOrderScreen();
 
             String choice = input.nextLine();
 
@@ -72,6 +62,8 @@ public class App {
     }
 
     public static Sandwich createSandwich() {
+        UserInterface.showSandwichMenu();
+
         System.out.print("Choose sandwich size (4, 8, 12): ");
         int size = Integer.parseInt(input.nextLine());
 
@@ -80,25 +72,25 @@ public class App {
 
         Sandwich sandwich = new Sandwich(size, bread);
 
-        System.out.print("Add meat? Enter type or leave blank: (Steak, Ham, Salami, Chicken, Bacon) ");
+        System.out.print("Add meat or leave blank: ");
         String meat = input.nextLine();
         if (!meat.equals("")) {
             sandwich.addMeat(meat);
         }
 
-        System.out.print("Add cheese? Enter type or leave blank: (Cheddar, Provolone, Swiss, American) ");
+        System.out.print("Add cheese or leave blank: ");
         String cheese = input.nextLine();
         if (!cheese.equals("")) {
             sandwich.addCheese(cheese);
         }
 
-        System.out.print("Add regular topping? Enter type or leave blank: (Tomatoes, Lettuce, Peppers,Onions, Jalapenos, Cucumbers, Pickles, Guacamole, Mushrooms) ");
+        System.out.print("Add topping or leave blank: ");
         String topping = input.nextLine();
         if (!topping.equals("")) {
             sandwich.addTopping(topping);
         }
 
-        System.out.print("Add sauce? Enter type or leave blank: (Mayo, Mustard, Ketchup, Ranch, Thousand Islands, Vinaigrette) ");
+        System.out.print("Add sauce or leave blank: ");
         String sauce = input.nextLine();
         if (!sauce.equals("")) {
             sandwich.addSauce(sauce);
@@ -116,10 +108,12 @@ public class App {
     }
 
     public static Drink createDrink() {
+        UserInterface.showDrinkMenu();
+
         System.out.print("Choose drink size (small, medium, large): ");
         String size = input.nextLine();
 
-        System.out.print("Choose drink flavor:(Sprite, Coke, Pepsi, Lemonade, Ginger Ale) ");
+        System.out.print("Choose drink flavor: ");
         String flavor = input.nextLine();
 
         System.out.println("Drink added.");
@@ -127,7 +121,8 @@ public class App {
     }
 
     public static Chips createChips() {
-        System.out.print("Choose chip type: (Doritos, Cheetos, Ruffles, Lay's, Herr's) ");
+        UserInterface.showChipsMenu();
+        System.out.print("Choose chip type: ");
         String type = input.nextLine();
 
         System.out.println("Chips added.");
@@ -135,10 +130,8 @@ public class App {
     }
 
     public static void checkout(Order order) {
-        System.out.println();
-        System.out.println(order.getReceiptText());
+        UserInterface.showCheckout(order);
 
-        System.out.print("Confirm order? yes/no: ");
         String confirm = input.nextLine();
 
         if (confirm.equalsIgnoreCase("yes")) {

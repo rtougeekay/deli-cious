@@ -1,0 +1,18 @@
+=== DELI-cious Receipt ===
+
+Sandwiches:
+12" wrap sandwich
+Meats: [yes]
+Cheeses: [yes]
+Toppings: [lettuce, peppers, pickles]
+Sauces: [mayo and ranch]
+Toasted: true
+Price: $13.75
+
+Drinks:
+large Ginger Ale drink - $3.0
+
+Chips:
+Cheetos chips - $1.5
+
+TOTAL: $18.25

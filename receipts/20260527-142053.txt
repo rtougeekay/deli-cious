@@ -1,0 +1,18 @@
+=== DELI-cious Receipt ===
+
+Sandwiches:
+12" white sandwich
+Meats: [bacon, steak, and salami]
+Cheeses: [American]
+Toppings: [lettuce, peppers, jaleopenos, pickles]
+Sauces: [mayo, ranch, and ketchup]
+Toasted: true
+Price: $13.75
+
+Drinks:
+ginger ale large drink - $3.0
+
+Chips:
+ruffles chips - $1.5
+
+TOTAL: $18.25
