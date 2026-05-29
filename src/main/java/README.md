@@ -1,3 +1,5 @@
+![Blank diagram.png](../../../diagram/Blank%20diagram.png)
+
 # DELI-cious Capstone Project
 
 ## Overview

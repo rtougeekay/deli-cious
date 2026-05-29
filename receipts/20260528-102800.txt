@@ -1,0 +1,16 @@
+=== DELI-cious Receipt ===
+
+Sandwiches:
+4" white sandwich
+Meats: [steak]
+Cheeses: [american]
+Toppings: [lettuce]
+Sauces: [mayo]
+Toasted: true
+Price: $7.25
+
+Drinks:
+
+Chips:
+
+TOTAL: $7.25
